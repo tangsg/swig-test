@@ -14,7 +14,5 @@ print(b)
 a = np.array([1, 1], dtype=np.int32)
 b = np.array([1, 1], dtype=np.int32)
 c = np.array([1, 1], dtype=np.int32)
-
 example.Example().array_add(a, b, c)
-
 print(c)

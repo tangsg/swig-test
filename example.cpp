@@ -13,7 +13,9 @@ int Example::sub(int *x, int *y) {
 }
 
 
-void Example::array_add(int *a, int *b, int *c) { 
-    c[0] = a[0] + b[0]; 
-    c[1] = a[1] + b[1]; 
+void Example::array_add(int *a, int len_a, int *b, int len_b, int *c, int len_c) { 
+    int const mmax = std::max(len_a, std::max(len_b, len_c));
+    for (int i=0; i<mmax; i++){
+        c[i] = a[i] + b[i];
+    }
 }

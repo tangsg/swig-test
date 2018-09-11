@@ -13,7 +13,8 @@
 %apply int *OUTPUT { int *result };
 %apply int *INPUT { int *x, int *y};
 
-%apply int *INPLACE_ARRAY1 {int *a, int *b, int *c};
+%apply (int *IN_ARRAY1, int DIM1) { (int *a, int len_a), (int *b, int len_b) };
+%apply (int *INPLACE_ARRAY1, int DIM1) {int *c, int len_c};
 
 %include "example.h"
 
